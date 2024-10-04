@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav {
+    margin: 1rem 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+#nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
+    background-size: cover;
+    text-align: center;
+    padding: 4rem 1rem;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    margin: 1rem 0;
+}
+
+.cta {
+    background-color: #FF5722;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.features,
+.how-it-works,
+.testimonials {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.features h2,
+.how-it-works h2,
+.testimonials h2 {
+    margin-bottom: 1rem;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.feature {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 0.5rem;
+    flex: 1 1 30%;
+    /* Make it flexible */
+    max-width: 30%;
+    /* Maximum width for larger screens */
+}
+
+.feature img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.how-it-works ol {
+    text-align: left;
+    margin: 1rem auto;
+    max-width: 400px;
+}
+
+.contact-us {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 1rem 0;
+}
+
+.contact-us h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-us p {
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.newsletter {
+    margin-top: 1rem;
+}
+
+.newsletter input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    background-color: #FF5722;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message {
+    color: green;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .feature-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature {
+        width: 80%;
+        /* Ensure it takes more space on smaller screens */
+        max-width: none;
+        /* Remove max-width on smaller screens */
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .cta {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+    .how-it-works ol {
+        max-width: 90%;
+    }
+    #nav-toggle {
+        display: block;
+        /* Show toggle button on mobile */
+    }
+    nav {
+        display: none;
+        /* Hide nav by default on mobile */
+        flex-direction: column;
+        align-items: center;
+    }
+    nav.active {
+        display: flex;
+        /* Show nav when active */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .footer-links a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    .newsletter input {
+        width: 80%;
+        margin-top: 0.5rem;
+    }
+}
